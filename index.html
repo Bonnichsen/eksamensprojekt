@@ -4,15 +4,61 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eksamens projekt</title>
+    <title>Frontpage - Nicholas Nybro</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
+    <section class="splash">
+        <video class="fullvid" src="http://nicholasnybro.dk/media/9790/NN_SS18-1.m4v" autoplay muted loop></video>
+    </section>
 
 
+    <script>
+        $(document).ready(function() {
+            $('body')
+                .prepend('<div class="vidcover"></div>')
+                .hover(
+                    function() {
+                        $('.vidcover').css({
+                            'opacity': '0.4'
+                        })
+                    },
+                    function() {
+                        $('.vidcover').css({
+                            'opacity': '0'
+                        })
+                    }
+                );
 
-    <script src="java.js"></script>
+            $(window).resize(function() {
+                var theWidth = $(window).width();
+                var theHeight = $(window).height();
+                var newWidth = (theHeight * 1.77777778);
+                var newHeight = (theWidth / 1.77777778);
+
+                if ((theWidth > 1280) && (newHeight > theHeight)) {
+                    $('.fullvid').css({
+                        'width': theWidth,
+                        'height': newHeight
+                    });
+                }
+
+                if ((theHeight > 720) && (newWidth > theWidth)) {
+                    $('.fullvid').css({
+                        'height': theHeight,
+                        'width': newWidth
+                    });
+                }
+
+                $('.vidcover').css({
+                    'height': theHeight,
+                    'width': theWidth
+                });
+            }).resize();
+        });
+    </script>
 </body>
 
 </html>
