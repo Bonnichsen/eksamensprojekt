@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="grid-container" class="collections">
+        <section data-container>
+            <h2 data-collectionname></h2>
+        </section>
+    </div>
+
+    <template data-template>
+<article>
+    <div class="img_container"><img src="" alt="-" data-billede data-button-img></div>
+</article>
+   </template>
+
+
+    <script>
+        let jSonUrl = "http://benjaminbonnichsen.dk/eksamensprojekt/wordpress/wp-json/wp/v2/ss18";
+        let display = document.querySelector("[data-templatedisplay]");
+        let template = document.querySelector("[data-template]");
+        let collections = [];
+
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        async function hentJson() {
+            let dataJson = await fetch(jSonUrl);
+            collections = await dataJson.json();
+            console.log("Stop making fetch happen Gretchen!");
+            visCollections();
+        };
+
+
+        function visCollections() {
+            collections.forEach(collection => {
+                console.log(collection);
+                let templateModtager = document.querySelector("[data-container]");
+                let klon = template.cloneNode(true).content;
+
+                // klon.querySelector("[data-overskrift]").textContent = sted.title.rendered;
+                klon.querySelector("[data-billede]").src = collection.acf.ss18;
+                //                klon.querySelector("[data-stedlogo]").src = sted.acf.stedlogo.url;
+                //                klon.querySelector("[data-button]").addEventListener("click", () => {
+                //                    location.href = "sted.html?id=" + sted.id;
+                //                });
+                //                klon.querySelector("[data-button-img]").addEventListener("click", () => {
+                //                    location.href = "sted.html?id=" + sted.id;
+                //                });
+                //                klon.querySelector("[data-button-tekst]").addEventListener("click", () => {
+                //                    location.href = "sted.html?id=" + sted.id;
+                //                });
+
+                templateModtager.appendChild(klon);
+                console.log("The Klon War is over!")
+            });
+        }
+    </script>
+</body>
+
+</html>
