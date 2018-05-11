@@ -30,3 +30,7 @@
     -ms-transition: all 400ms ease-out 400ms;
     transition: all 400ms ease-out 400ms;
 }
+
+[data-billede] {
+    width: 95%;
+}
