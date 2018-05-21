@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <div id="grid-container" class="collections">
+
+    <div class="collections grid-container">
+
+        <h2 data-collectionname>THE BODY</h2>
         <section data-container>
-            <h2 data-collectionname></h2>
         </section>
     </div>
 
@@ -23,7 +27,7 @@
 
 
     <script>
-        let jSonUrl = "http://benjaminbonnichsen.dk/eksamensprojekt/wordpress/wp-json/wp/v2/ss18";
+        let jSonUrl = "http://benjaminbonnichsen.dk/eksamensprojekt/wordpress/wp-json/wp/v2/ss18?per_page=100";
         let display = document.querySelector("[data-templatedisplay]");
         let template = document.querySelector("[data-template]");
         let collections = [];
