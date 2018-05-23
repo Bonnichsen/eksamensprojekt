@@ -9,17 +9,159 @@ body {
     font-family: 'Roboto';
 }
 
-h2 {
-    font-weight: 400;
+/*--- FRONTPAGE ---*/
+
+.frontpage_container {
+    position: fixed;
+    left: 50%;
+    z-index: 20;
+}
+
+.frontpage_container_logo {
+    top: 0;
+}
+
+.frontpage_logo {
+    background-image: url(img/logo/NEW-NN-navnetraek_pos.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 100px;
+    position: relative;
+    top: 30px;
+    left: -50%;
+}
+
+.frontpage_container_collection {
+    top: 530px;
+}
+
+.frontpage_collection {
+    width: 250px;
+    height: 150px;
+    position: relative;
+    left: -50%;
+    text-align: center;
+}
+
+.frontpage_c_season {
+    font-size: 2.5em;
+}
+
+.frontpage_c_title {
+    font-size: 1.5em;
+    margin: 2px 0 15px 0;
+}
+
+.frontpage_c_btn {
+    font-size: 14px;
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    padding: 20px 20px;
+    border-radius: 50px;
+    height: 15px;
+    width: 210px;
+    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #ffeae6 !important;
+    text-decoration: none;
+}
+
+/*--- SIDEBAR/MENU ---*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+}
+
+.nav_links {
+    color: #ffeae6!important;
+    display: block;
+    padding: 26px 20px!important;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1em;
+}
+
+.sidenav a:hover {
+    color: #ffeae6;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#openbtn {
+    -webkit-transition: margin-left .5s;
+    -moz-transition: margin-left .5s;
+    -ms-transition: margin-left .5s;
+    transition: margin-left .5s;
+    padding: 16px;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+#openbtn:hover {
+    transform: scale(1.2);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#move_logo,
+#move_collection {
+    -webkit-transition: margin-left .8s;
+    -moz-transition: margin-left .8s;
+    -ms-transition: margin-left .8s;
+    transition: margin-left .8s
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
 }
 
 /*--- FULLSCREEN VIDEO --*/
 
-.splash {
+.frontpage_splash {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     position: fixed;
+    overflow: hidden;
     top: 0;
 }
 
@@ -41,15 +183,14 @@ h2 {
     transition: all 400ms ease-out 400ms;
 }
 
+/*--- GRID ---*/
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
 
-[data-billede] {
-    width: 100%;
-}
+/*--- COLLECTIONS --*/
 
 [data-container] {
     display: grid;
@@ -58,7 +199,16 @@ h2 {
     grid-column: 2/11;
 }
 
+[data-collectionname] {
+    font-weight: 400;
+}
 
+[data-billede] {
+    width: 100%;
+}
+
+
+/*--- MEDIA QUERIES ---*/
 
 /*----- IPAD ------*/
 

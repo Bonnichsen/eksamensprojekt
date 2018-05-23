@@ -12,13 +12,59 @@
 </head>
 
 <body>
-    <section class="splash">
-        <video class="fullvid" src="http://nicholasnybro.dk/media/9790/NN_SS18-1.m4v" autoplay muted loop></video>
+    <section class="frontpage_grid grid-container">
+
+        <div id="move_logo" class="frontpage_container frontpage_container_logo">
+            <div class="frontpage_logo"></div>
+        </div>
+
+        <div id="move_collection" class="frontpage_container frontpage_container_collection">
+            <div class="frontpage_collection">
+                <h2 class="frontpage_c_season">SS18</h2>
+                <h3 class="frontpage_c_title">- THE BODY -</h3>
+                <a href="collection.html" class="frontpage_c_btn">VIEW COLLECTION</a>
+            </div>
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="nav_links" href="#">Frontpage</a>
+            <a class="nav_links" href="#">Latest News</a>
+            <a class="nav_links" href="#">Collections</a>
+            <a class="nav_links" href="#">About</a>
+            <a class="nav_links" href="#">Go to shop</a>
+        </div>
+
+        <div>
+            <span id="openbtn" onclick="openNav()">&#9776;</span>
+        </div>
+
+        <div class="frontpage_splash">
+            <video class="fullvid" src="http://nicholasnybro.dk/media/9790/NN_SS18-1.m4v" autoplay muted loop></video>
+        </div>
+
+
     </section>
 
 
     <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("move_logo").style.marginLeft = "350px";
+            document.getElementById("move_collection").style.marginLeft = "350px";
+
+            document.getElementById("openbtn").style.display = "none";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("move_logo").style.marginLeft = "0";
+            document.getElementById("move_collection").style.marginLeft = "0";
+
+            document.getElementById("openbtn").style.display = "block";
+        }
         $(document).ready(function() {
+
             $('body')
                 .prepend('<div class="vidcover"></div>')
                 .hover(
