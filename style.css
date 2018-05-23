@@ -9,29 +9,49 @@ body {
     font-family: 'Roboto';
 }
 
+/*--- GRID ---*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+/*--- LOGO ---*/
+
+.logo{
+
+    background-image: url(img/logo/NEW-NN-navnetraek_pos.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    z-index: 39;
+    top: 30px;
+    left: -50%;
+    cursor: pointer;
+}
+
+.frontpage_logo {
+    width: 200px;
+    height: 100px;
+    top: 30px;
+}
+
+.page_logo{
+    width: 160px;
+    height: 100px;
+    top: 20px;
+}
+
 /*--- FRONTPAGE ---*/
 
-.frontpage_container {
+.frontpage_container, .container {
     position: fixed;
     left: 50%;
     z-index: 20;
 }
 
-.frontpage_container_logo {
+.frontpage_container_logo, .container_logo {
     top: 0;
-}
-
-.frontpage_logo {
-    background-image: url(img/logo/NEW-NN-navnetraek_pos.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 200px;
-    height: 100px;
-    position: relative;
-    top: 30px;
-    left: -50%;
-    cursor: pointer;
-    z-index: 39;
 }
 
 .frontpage_container_collection {
@@ -200,12 +220,9 @@ body {
     transition: all 400ms ease-out 400ms;
 }
 
-/*--- GRID ---*/
+/*--- EVERY PAGE ---*/
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-}
+
 
 /*--- COLLECTIONS --*/
 

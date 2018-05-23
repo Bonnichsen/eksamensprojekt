@@ -16,7 +16,7 @@
     <section class="frontpage_grid grid-container">
 
         <div id="move_logo" class="frontpage_container frontpage_container_logo">
-            <div href="index.html" class="frontpage_logo"></div>
+            <div onclick="logoHref()" class="logo frontpage_logo"></div>
         </div>
 
         <div id="move_collection" class="frontpage_container frontpage_container_collection">
@@ -48,16 +48,20 @@
             <video class="fullvid" src="http://nicholasnybro.dk/media/9790/NN_SS18-1.m4v" autoplay muted loop></video>
         </div>
 
-
     </section>
 
 
     <script>
+        function logoHref() {
+            document.querySelector(".frontpage_logo").addEventListener("click", () => {
+                location.href = "index.html";
+            });
+        };
+
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
             document.getElementById("move_logo").style.marginLeft = "350px";
             document.getElementById("move_collection").style.marginLeft = "350px";
-
             document.getElementById("openbtn").style.marginLeft = "250px";
         }
 
@@ -111,6 +115,7 @@
                 });
             }).resize();
         });
+
     </script>
 </body>
 
