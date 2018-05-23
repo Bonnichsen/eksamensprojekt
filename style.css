@@ -30,6 +30,8 @@ body {
     position: relative;
     top: 30px;
     left: -50%;
+    cursor: pointer;
+    z-index: 39;
 }
 
 .frontpage_container_collection {
