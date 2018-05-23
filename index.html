@@ -7,6 +7,7 @@
     <title>Frontpage - Nicholas Nybro</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
@@ -27,7 +28,7 @@
         </div>
 
         <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
             <a class="nav_links" href="#">Frontpage</a>
             <a class="nav_links" href="#">Latest News</a>
             <a class="nav_links" href="#">Collections</a>
@@ -36,7 +37,11 @@
         </div>
 
         <div>
-            <span id="openbtn" onclick="openNav()">&#9776;</span>
+            <button id="openbtn" onclick="openNav()"><a id="btn_a"><i class="fa fa-bars"></i></a></button>
+        </div>
+
+        <div>
+            <button id="shopbtn"><a href="http://nicholasnybro.tictail.com/products/icons" target="_blank" id="btn_a"><i class="fa fa-shopping-cart"></i></a></button>
         </div>
 
         <div class="frontpage_splash">
@@ -53,7 +58,7 @@
             document.getElementById("move_logo").style.marginLeft = "350px";
             document.getElementById("move_collection").style.marginLeft = "350px";
 
-            document.getElementById("openbtn").style.display = "none";
+            document.getElementById("openbtn").style.marginLeft = "250px";
         }
 
         function closeNav() {
@@ -61,7 +66,7 @@
             document.getElementById("move_logo").style.marginLeft = "0";
             document.getElementById("move_collection").style.marginLeft = "0";
 
-            document.getElementById("openbtn").style.display = "block";
+            document.getElementById("openbtn").style.marginLeft = "0";;
         }
         $(document).ready(function() {
 
@@ -106,6 +111,7 @@
                 });
             }).resize();
         });
+
     </script>
 </body>
 
