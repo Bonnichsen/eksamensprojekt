@@ -43,9 +43,17 @@
         };
 
         function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("move_logo").style.marginLeft = "350px";
-            document.getElementById("openbtn").style.marginLeft = "250px";
+
+            var $containerWidth = $(window).width();
+            if ($containerWidth <= 818) {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("move_logo").style.marginLeft = "350px";
+                document.getElementById("openbtn").style.marginLeft = "250px";
+            } else {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("move_logo").style.marginLeft = "0px";
+                document.getElementById("openbtn").style.marginLeft = "250px";
+            };
         }
 
         function closeNav() {
@@ -53,7 +61,6 @@
             document.getElementById("move_logo").style.marginLeft = "0";
             document.getElementById("openbtn").style.marginLeft = "0";;
         }
-
     </script>
 </body>
 
