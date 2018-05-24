@@ -17,10 +17,10 @@
         <div id="mySidenav" class="sidenav">
             <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
             <a class="nav_links" href="index.html">Frontpage</a>
-            <a class="nav_links" href="#">Collections</a>
-            <a class="nav_links" href="#">Latest News</a>
+            <a class="nav_links" href="collections.html">Collections</a>
+            <a class="nav_links" href="news.html">Latest News</a>
             <a class="nav_links" href="http://nicholasnybro.tictail.com/products/" target="_blank">Go to shop</a>
-            <a class="nav_links" href="#">About</a>
+            <a class="nav_links" href="about.html">About</a>
         </div>
 
         <div>
@@ -42,8 +42,19 @@
             });
         };
 
-        function openNav() {
+        $("#openbtn").click(function() {
+            setTimeout(function() {
+                $(".nav_links").css("visibility", "visible");
+            }, 300)
+        });
 
+        $(".closebtn").click(function() {
+            setTimeout(function() {
+                $(".nav_links").css("visibility", "hidden");
+            }, 100)
+        });
+
+        function openNav() {
             var $containerWidth = $(window).width();
             if ($containerWidth <= 818) {
                 document.getElementById("mySidenav").style.width = "250px";

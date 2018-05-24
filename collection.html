@@ -7,17 +7,40 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
+    <section class="grid-container">
+    <div class="header_box"></div>
+        <div id="mySidenav" class="sidenav">
+            <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
+            <a class="nav_links" href="index.html">Frontpage</a>
+            <a class="nav_links" href="collections.html">Collections</a>
+            <a class="nav_links" href="news.html">Latest News</a>
+            <a class="nav_links" href="http://nicholasnybro.tictail.com/products/" target="_blank">Go to shop</a>
+            <a class="nav_links" href="about.html">About</a>
+        </div>
 
-    <div class="collections grid-container">
+        <div>
+            <button id="openbtn" onclick="openNav()"><a id="btn_a"><i class="fa fa-bars"></i></a></button>
+        </div>
 
-        <h2 data-collectionname>THE BODY</h2>
-        <section data-container>
-        </section>
-    </div>
+        <div>
+            <button id="shopbtn"><a href="http://nicholasnybro.tictail.com/products/icons" target="_blank" id="btn_a"><i class="fa fa-shopping-cart"></i></a></button>
+        </div>
+        <div id="move_logo" class="container container_logo">
+            <div onclick="logoHref()" class="logo page_logo"></div>
+        </div>
+        <div class="collection_grid grid-container">
+
+            <h2 data-collectionname>THE BODY</h2>
+            <section data-container>
+            </section>
+        </div>
+    </section>
+
 
     <template data-template>
 <article>
@@ -27,7 +50,7 @@
 
 
     <script>
-        let jSonUrl = "http://benjaminbonnichsen.dk/eksamensprojekt/wordpress/wp-json/wp/v2/ss18?per_page=100";
+        let jSonUrl = "http://benjaminbonnichsen.dk/eksamensprojekt/wordpress/wp-json/wp/v2/ss18?per_page=50";
         let display = document.querySelector("[data-templatedisplay]");
         let template = document.querySelector("[data-template]");
         let collections = [];
@@ -48,23 +71,47 @@
                 console.log(collection);
                 let templateModtager = document.querySelector("[data-container]");
                 let klon = template.cloneNode(true).content;
-
-                // klon.querySelector("[data-overskrift]").textContent = sted.title.rendered;
                 klon.querySelector("[data-billede]").src = collection.acf.ss18;
-                //                klon.querySelector("[data-stedlogo]").src = sted.acf.stedlogo.url;
-                //                klon.querySelector("[data-button]").addEventListener("click", () => {
-                //                    location.href = "sted.html?id=" + sted.id;
-                //                });
-                //                klon.querySelector("[data-button-img]").addEventListener("click", () => {
-                //                    location.href = "sted.html?id=" + sted.id;
-                //                });
-                //                klon.querySelector("[data-button-tekst]").addEventListener("click", () => {
-                //                    location.href = "sted.html?id=" + sted.id;
-                //                });
-
                 templateModtager.appendChild(klon);
                 console.log("The Klon War is over!")
             });
+        }
+
+        function logoHref() {
+            document.querySelector(".frontpage_logo").addEventListener("click", () => {
+                location.href = "index.html";
+            });
+        };
+
+        $("#openbtn").click(function() {
+            setTimeout(function() {
+                $(".nav_links").css("visibility", "visible");
+            }, 300)
+        });
+
+        $(".closebtn").click(function() {
+            setTimeout(function() {
+                $(".nav_links").css("visibility", "hidden");
+            }, 100)
+        });
+
+        function openNav() {
+            var $containerWidth = $(window).width();
+            if ($containerWidth <= 818) {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("move_logo").style.marginLeft = "350px";
+                document.getElementById("openbtn").style.marginLeft = "250px";
+            } else {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("move_logo").style.marginLeft = "0px";
+                document.getElementById("openbtn").style.marginLeft = "250px";
+            };
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("move_logo").style.marginLeft = "0";
+            document.getElementById("openbtn").style.marginLeft = "0";;
         }
     </script>
 </body>
