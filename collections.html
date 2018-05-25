@@ -33,11 +33,54 @@
         <div id="move_logo" class="container container_logo">
             <div onclick="logoHref()" class="logo page_logo"></div>
         </div>
+
+        <div class="collection_grid grid-container">
+            <section data-container-collections>
+            </section>
+        </div>
     </section>
 
+
+    <template data-template>
+<article class="collections_article">
+   <div class="collections_overlay"></div>
+   <h3 data-collection_name></h3>
+    <div class="img_container_collections">
+    <img src="" alt="-" data-collection data-button-img></div>
+</article>
+   </template>
     <script>
+        let jSonUrl = "http://benjaminbonnichsen.dk/eksamensprojekt/wordpress/wp-json/wp/v2/kollektioner?per_page=50";
+        let display = document.querySelector("[data-templatedisplay]");
+        let template = document.querySelector("[data-template]");
+        let collections = [];
+
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        async function hentJson() {
+            let dataJson = await fetch(jSonUrl);
+            collections = await dataJson.json();
+            console.log("Stop making fetch happen Gretchen!");
+            visCollections();
+        };
+
+
+        function visCollections() {
+            collections.forEach(collection => {
+                console.log(collection);
+                let templateModtager = document.querySelector("[data-container-collections]");
+                let klon = template.cloneNode(true).content;
+                klon.querySelector("[data-collection_name]").textContent = collection.title.rendered;
+                klon.querySelector("[data-collection]").src = collection.acf.image;
+                templateModtager.appendChild(klon);
+                console.log("The Klon War is over!")
+            });
+        }
+
+
         function logoHref() {
-            document.querySelector(".frontpage_logo").addEventListener("click", () => {
+            document.querySelector(".logo").addEventListener("click", () => {
                 location.href = "index.html";
             });
         };
