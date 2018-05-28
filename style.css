@@ -278,36 +278,11 @@ body {
 
 /*--- EVERY PAGE ---*/
 
-.container_collections {
-    position: relative;
-    width: 100%;
-    grid-column: 1/12;
-    left: 0;
-    margin: 12px 0;
-}
-
-.image_collection {
-    display: block;
-    width: 100%;
-    height: 120px;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(255, 234, 230, 0.37);
-}
-
-
 /*--- COLLECTIONS ---*/
 
 [data-container-collections] {
     display: grid;
+    grid-template-columns: 1fr;
     grid-gap: 2vw 2.5vw;
     grid-row: 4;
     grid-column: 2/12;
@@ -328,11 +303,41 @@ body {
 
 [data-collection_name] {
     position: absolute;
-    margin: 33.5px 0;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     text-align: center;
-    width: 280px;
+    width: 100%;
     font-size: 2.8em;
-    color: rgba(0, 0, 0, 0.75);
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.container_collections {
+    position: relative;
+    width: 100%;
+    left: 0;
+    margin: 12px 0;
+}
+
+.image_collection {
+    display: block;
+    width: 100%;
+    height: 120px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 234, 230, 0.49);
+}
+
+.overlay:hover {
+    background-color: rgba(255, 234, 230, 0.20);
 }
 
 
@@ -351,15 +356,15 @@ body {
 [data-container] {
     display: grid;
     grid-gap: 2vw 2.5vw;
-    grid-row: 4;
+    grid-row: 5;
     grid-column: 2/12;
 }
 
 [data-collectionname] {
     grid-column: 2/12;
     text-align: center;
-    font-weight: 400;
-    padding: 20px;
+    font-weight: 800;
+    padding: 20px 0;
 }
 
 [data-collectionname-h1] {
@@ -371,7 +376,7 @@ body {
 
 [data-collectiontext] {
     grid-column: 2/12;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .headline {
@@ -442,6 +447,28 @@ body {
 }
 
 
+/*--- CAMPAIGN VIDEO ---*/
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    grid-column: 2/12;
+    grid-row: 4;
+    margin-bottom: 2.5vw;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
 /*---- CONTACT ----*/
 
@@ -505,7 +532,7 @@ body {
         background-repeat: no-repeat;
         visibility: hidden;
     }
-    .img_container_collections {
+    .image_collection {
         height: 160px;
     }
 
@@ -537,6 +564,14 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .img_container_collections {
-        height: 250px;
+    .image_collection {
+        height: 200px;
+    }
+
+    [data-container-collections] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .collections_article:hover {
+        transform: scale(1.05);
     }
