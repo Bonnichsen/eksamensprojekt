@@ -342,6 +342,13 @@ body {
     padding: 20px;
 }
 
+[data-collectionname-h1] {
+    grid-column: 2/12;
+    text-align: left;
+    font-weight: 800;
+    padding: 20px 0;
+}
+
 [data-collectiontext] {
     grid-column: 2/12;
     margin-bottom: 40px;
@@ -360,6 +367,45 @@ body {
 .about_grid {
     grid-column: 2/12;
     margin: 120px 0 140px 0;
+}
+
+
+/*---- CONTACT ----*/
+
+.contact_grid {
+    grid-column: 2/12;
+    margin: 120px 0 140px 0;
+}
+
+[data-contactname] {
+    grid-column: 2/12;
+    text-align: left;
+    font-weight: 800;
+    padding: 20px 0;
+    font-size: 3.85em;
+}
+
+[data-contacttext] {
+    grid-column: 2/12;
+    margin-bottom: 40px;
+}
+
+.contactheadline {
+    grid-column: 2/12;
+    font-size: 1.25em;
+    letter-spacing: 0.2em;
+}
+
+.contact_grid a {
+    text-decoration: none;
+    color: #332F2D
+}
+
+.contact_grid a:hover {
+    text-decoration: none;
+    color: #fdebe6;
+    font-weight: 500;
+    background-color: #332F2D
 }
 
 /*--- MEDIA QUERIES ---*/
