@@ -384,10 +384,63 @@ body {
 }
 
 .collection_grid,
+
+/*---- ABOUT ----*/
+
 .about_grid {
     grid-column: 2/12;
     margin: 120px 0 140px 0;
 }
+
+[data-aboutname] {
+    grid-column: 2/12;
+    text-align: left;
+    font-weight: 800;
+    padding: 20px 0;
+    font-size: 3.85em;
+    text-align: center;
+}
+
+[data-abouttext] {
+    grid-column: 2/12;
+    margin-bottom: 40px;
+}
+
+.portraet {
+    background-image: url(img/infographic/portraet.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 75vw;
+    width: 75vw;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+}
+
+.infographic_01 {
+    background-image: url(img/infographic/t.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 10vw;
+    width: 20vw;
+    position: absolute;
+    right: 4%;
+    bottom: 34.35%;
+    cursor: pointer;
+}
+
+.infographic_02 {
+    background-image: url(img/infographic/t.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 10vw;
+    width: 20vw;
+    position: absolute;
+    right: 4%;
+    bottom: 34.35%;
+    cursor: pointer;
+}
+
 
 
 /*---- CONTACT ----*/
@@ -399,7 +452,7 @@ body {
 
 [data-contactname] {
     grid-column: 2/12;
-    text-align: left;
+    text-align: center;
     font-weight: 800;
     padding: 20px 0;
     font-size: 3.85em;
@@ -414,6 +467,7 @@ body {
     grid-column: 2/12;
     font-size: 1.25em;
     letter-spacing: 0.2em;
+    border-bottom: 1px black solid;
 }
 
 .contact_grid a {
@@ -434,6 +488,7 @@ body {
 
 @media screen and (min-width: 600px) {
 
+
     .grid-container {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -453,6 +508,24 @@ body {
     .img_container_collections {
         height: 160px;
     }
+
+    [data-aboutname] {
+        grid-column: 2/12;
+        text-align: left;
+        font-weight: 800;
+        padding: 20px 0;
+        font-size: 3.85em;
+        text-align: left;
+    }
+    [data-contactname] {
+        grid-column: 2/12;
+        text-align: left;
+        font-weight: 800;
+        padding: 20px 0;
+        font-size: 3.85em;
+        text-align: left;
+    }
+
 }
 
 
