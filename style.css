@@ -95,11 +95,11 @@ body {
 }
 
 .frontpage_c_btn:hover {
-    transform: scale(1.05);
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    transition: all 0.2s;
+    transform: scale(1.1);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 .frontpage_container_some {
@@ -119,6 +119,15 @@ body {
     padding: 10px;
     text-align: center;
     cursor: pointer;
+}
+
+.fa-facebook-square:hover,
+.fa-instagram:hover {
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+    transform: scale(1.2);
 }
 
 /*--- SIDEBAR/MENU ---*/
@@ -173,10 +182,6 @@ body {
 
 #openbtn,
 #shopbtn {
-    -webkit-transition: margin-left .5s;
-    -moz-transition: margin-left .5s;
-    -ms-transition: margin-left .5s;
-    transition: margin-left .5s;
     padding: 16px;
     position: fixed;
     z-index: 20;
@@ -188,7 +193,11 @@ body {
 
 #openbtn:hover,
 #shopbtn:hover {
-    width: 70px;
+    transform: scale(1.1);
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
 }
 
 #openbtn {
@@ -214,10 +223,10 @@ body {
 
 #btn_a:hover {
     transform: scale(1.2);
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: all .8s;
+    -moz-transition: all .8s;
+    -ms-transition: all .8s;
+    transition: all .8s;
 }
 
 #move_logo,
