@@ -363,8 +363,8 @@ body {
 [data-collectionname] {
     grid-column: 2/12;
     text-align: center;
-    font-weight: 400;
-    padding: 20px;
+    font-weight: 800;
+    padding: 20px 0;
 }
 
 [data-collectionname-h1] {
@@ -376,7 +376,7 @@ body {
 
 [data-collectiontext] {
     grid-column: 2/12;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .headline {
@@ -403,7 +403,7 @@ body {
     overflow: hidden;
     grid-column: 2/12;
     grid-row: 4;
-    margin: 10px 0;
+    margin-bottom: 2.5vw;
 }
 
 .video-container iframe,
@@ -488,11 +488,6 @@ body {
 
     [data-container] {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    .collection_grid,
-    .about_grid {
-        margin: 150px 0 140px 0;
     }
 
     .image_collection {
