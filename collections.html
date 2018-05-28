@@ -42,13 +42,14 @@
 
 
     <template data-template>
-<article class="collections_article">
-   <div class="collections_overlay"></div>
-   <h3 data-collection_name></h3>
-    <div class="img_container_collections">
-    <img src="" alt="-" data-collection data-button-img></div>
-</article>
+        <article class="collections_article container_collections">
+          <img class="image_collection" src="" alt="-" data-collection data-button-img>
+          <div class="overlay">
+              <h3 data-collection_name></h3>
+          </div>
+        </article>
    </template>
+
     <script>
         let jSonUrl = "http://benjaminbonnichsen.dk/eksamensprojekt/wordpress/wp-json/wp/v2/kollektioner?per_page=50";
         let display = document.querySelector("[data-templatedisplay]");
