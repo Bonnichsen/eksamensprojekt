@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="">
 
 <head>
     <meta charset="utf-8">
@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-
 <header class="header_box">
     <div id="mySidenav" class="sidenav">
         <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
@@ -18,6 +17,7 @@
         <a class="nav_links" href="collections.html">Collections</a>
         <a class="nav_links" href="news.html">Latest News</a>
         <a class="nav_links" href="about.html">About</a>
+        <a class="nav_links" href="contact.html">Contact</a>
         <a class="nav_links" href="http://nicholasnybro.tictail.com/products/" target="_blank">Go to shop</a>
     </div>
 
@@ -35,11 +35,57 @@
 
 <body>
     <section class="grid-container">
+        <div class="collection_grid grid-container">
 
+            <h2 data-collectionname>AW17</h2>
+            <b class="headline">The AW17 collection, Souvenirs, is a tribute to diversity. </b>
+            <p data-collectiontext>
+                <br> Instead of embracing diversity, we have closed ourselves off from it, which is a topic that has been discussed countless of times.
+                <br>This collection is meant to debate topics such as 'Who we are' and 'What makes us Danish?'. It's made with humor, self-esteem and with a big crooked smile.
+            </p>
+            <section data-container>
+            </section>
+        </div>
     </section>
+
+
+    <template data-template>
+<article>
+    <div class="img_container"><img src="" alt="-" data-billede data-button-img></div>
+</article>
+   </template>
+
+
     <script>
+        let jSonUrl = "http://benjaminbonnichsen.dk/eksamensprojekt/wordpress/wp-json/wp/v2/aw17?per_page=50";
+        let display = document.querySelector("[data-templatedisplay]");
+        let template = document.querySelector("[data-template]");
+        let collections = [];
+
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        async function hentJson() {
+            let dataJson = await fetch(jSonUrl);
+            collections = await dataJson.json();
+            console.log("Stop making fetch happen Gretchen!");
+            visCollections();
+        };
+
+
+        function visCollections() {
+            collections.forEach(collection => {
+                console.log(collection);
+                let templateModtager = document.querySelector("[data-container]");
+                let klon = template.cloneNode(true).content;
+                klon.querySelector("[data-billede]").src = collection.acf.aw17;
+                templateModtager.appendChild(klon);
+                console.log("The Klon War is over!")
+            });
+        }
+
         function logoHref() {
-            document.querySelector(".logo").addEventListener("click", () => {
+            document.querySelector(".frontpage_logo").addEventListener("click", () => {
                 location.href = "index.html";
             });
         };
@@ -72,8 +118,8 @@
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("move_logo").style.marginLeft = "0";
-            document.getElementById("openbtn").style.marginLeft = "0";
-        };
+            document.getElementById("openbtn").style.marginLeft = "0";;
+        }
     </script>
 </body>
 
