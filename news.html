@@ -34,10 +34,80 @@
 </header>
 
 <body>
-    <section class="grid-container">
+    <div id="grid-container" class="nyheder">
+        <div class="collection_grid grid-container">
+            <section class="news-container" data-container></section>
+        </div>
+    </div>
 
-    </section>
+    <template data-template>
+       <article class="news_article">
+         <div class="boks" data-button>
+         <p data-dato data-button-dato></p>
+         <h2 data-nyhedstitel data-button-nyhedstitel></h2>
+           <h3 data-short_text data-button-short_text><li><p></p></li></h3>
+           <button data-button-tekst="">Læs mere</button></div>
+          <div class="billedboks"><img src="" alt="-" data-billede data-button-image></div>
+<!--           <p data-textcontent></p>-->
+       </article>
+   </template>
+
     <script>
+        let jSonUrl = "http://benjaminbonnichsen.dk/eksamensprojekt/wordpress/wp-json/wp/v2/news?per_page=100";
+        let display = document.querySelector("[data-templatedisplay]");
+        let template = document.querySelector("[data-template]");
+        let nyheder = [];
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        async function hentJson() {
+            let dataJson = await fetch(jSonUrl);
+            nyheder = await dataJson.json();
+            console.log("Stop making fetch happen Gretchen!");
+            visNyheder();
+
+        };
+
+
+        function visNyheder() {
+            nyheder.forEach(nyhed => {
+                console.log(nyhed);
+                let templateModtager = document.querySelector("[data-container]");
+                let klon = template.cloneNode(true).content;
+
+                klon.querySelector("[data-nyhedstitel]").textContent = nyhed.title.rendered;
+                klon.querySelector("[data-billede]").src = nyhed.acf.billede;
+                klon.querySelector("[data-short_text]").textContent = nyhed.acf.short_text;
+                klon.querySelector("[data-dato]").textContent = nyhed.acf.dato;
+
+                //                klon.querySelector("[data-button]").addEventListener("click", () => {
+                //                    location.href = "nyhed.html?id=" + nyhed.id;
+                //                });
+                //                klon.querySelector("[data-button-image]").addEventListener("click", () => {
+                //                    location.href = "nyhed.html?id=" + nyhed.id;
+                //                });
+                //                klon.querySelector("[data-button-tekst]").addEventListener("click", () => {
+                //                    location.href = "nyhed.html?id=" + nyhed.id;
+                //                });
+                //                klon.querySelector("[data-button-dato]").addEventListener("click", () => {
+                //                    location.href = "nyhed.html?id=" + nyhed.id;
+                //                });
+                //                klon.querySelector("[data-button-nyhedstitel]").addEventListener("click", () => {
+                //                    location.href = "nyhed.html?id=" + nyhed.id;
+                //                });
+                //                klon.querySelector("[data-button-short_text]").addEventListener("click", () => {
+                //                    location.href = "nyhed.html?id=" + nyhed.id;
+                //                });
+
+
+
+                templateModtager.appendChild(klon);
+                console.log("The Klon War is over!")
+            });
+
+            console.log("halla");
+        }
+
         function logoHref() {
             document.querySelector(".logo").addEventListener("click", () => {
                 location.href = "index.html";
@@ -74,6 +144,8 @@
             document.getElementById("move_logo").style.marginLeft = "0";
             document.getElementById("openbtn").style.marginLeft = "0";;
         }
+
     </script>
 </body>
+
 </html>
