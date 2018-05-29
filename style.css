@@ -392,9 +392,13 @@ body {
 
 /*---- ABOUT ----*/
 
+#about .header_box {
+    background-color:
+}
+
 .about_grid {
     grid-column: 2/12;
-    margin: 120px 0 140px 0;
+    margin: 120px 0 0 0;
 }
 
 [data-aboutname] {
@@ -408,43 +412,174 @@ body {
 
 [data-abouttext] {
     grid-column: 2/12;
-    margin-bottom: 40px;
+}
+
+.test {
+    position: absolute;
+    background-image: url(img/infographic/test.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 60vw;
+    width: 80vw;
+    top: 53vw;
+
 }
 
 .portraet {
     background-image: url(img/infographic/portraet.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 75vw;
-    width: 75vw;
+    height: 90vw;
+    width: 90vw;
     position: absolute;
     right: 0%;
     bottom: 0%;
 }
 
-.infographic_01 {
-    background-image: url(img/infographic/t.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 10vw;
-    width: 20vw;
-    position: absolute;
-    right: 4%;
-    bottom: 34.35%;
+
+
+
+/*modalvinde*/
+
+/* The Modal (background) */
+
+#myModal {
+    z-index: 600;
+}
+
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.75);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fdebe6;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    z-index: 500;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
     cursor: pointer;
 }
 
-.infographic_02 {
+#myBtn {
+    height: 8.5vw;
+    width: 25vw;
+    position: absolute;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.infograhic_01 {
     background-image: url(img/infographic/t.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 10vw;
-    width: 20vw;
-    position: absolute;
     right: 4%;
-    bottom: 34.35%;
-    cursor: pointer;
+    bottom: 43%;
+    border: none;
 }
+
+.infograhic_02 {
+    background-image: url(img/infographic/fi.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: 35%;
+    bottom: 41%;
+    border: none;
+}
+
+.infograhic_03 {
+    background-image: url(img/infographic/ad.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: 4%;
+    bottom: 27%;
+    border: none;
+}
+
+.infograhic_04 {
+    background-image: url(img/infographic/ci.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: 10%;
+    bottom: 21%;
+    border: none;
+}
+
+.infograhic_05 {
+    background-image: url(img/infographic/fd.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: 27%;
+    bottom: 8%;
+    border: none;
+}
+
+.infograhic_06 {
+    background-image: url(img/infographic/cd2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: 4%;
+    bottom: 2%;
+    border: none;
+}
+
+.infograhic_07 {
+    background-image: url(img/infographic/cd.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: 60%;
+    bottom: 20%;
+    border: none;
+}
+
+.infograhic_08 {
+    background-image: url(img/infographic/s.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    right: 26%;
+    bottom: 35%;
+    border: none;
+}
+
+
 
 
 /*--- CAMPAIGN VIDEO ---*/
