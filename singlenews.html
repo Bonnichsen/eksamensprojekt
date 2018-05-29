@@ -59,11 +59,13 @@
 
                 <article>
                     <div class="nyhedsbillede"><img src="" alt="-" data-billede></div>
-                    <div class="nyhedsindhold">
-                        <p data-dato></p>
-                        <h2 data-nyhedstitel></h2>
-                        <h3 data-short_text></h3>
-                        <p data-lang_text></p>
+                    <div class="overflow_hidden">
+                        <div class="nyhedsindhold">
+                            <p data-dato></p>
+                            <h2 data-nyhedstitel></h2>
+                            <h3 data-short_text></h3>
+                            <p data-lang_text></p>
+                        </div>
                     </div>
                 </article>
             </section>
@@ -97,7 +99,7 @@
         function visNyhed() {
             let display = document.querySelector("[data-container]");
             console.log("halla");
-
+            //            let baggrund = document.getElementById("nyhedsbillede").style.backgroundImage = 'url("")';
             display.querySelector("[data-nyhedstitel]").textContent = nyhed.title.rendered;
             display.querySelector("[data-billede]").src = nyhed.acf.billede;
             display.querySelector("[data-short_text]").textContent = nyhed.acf.short_text;
