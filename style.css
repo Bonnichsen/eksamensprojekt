@@ -392,6 +392,7 @@ body {
 .collection_grid {
     grid-template-columns: repeat(12, 1fr);
     margin: 120px 30px;
+    grid-column: 1/13;
 }
 
 /*---- ABOUT ----*/
@@ -818,7 +819,6 @@ body {
 
 .nyheder .boks {
     background: linear-gradient(transparent, #ad9792);
-    /*            background-color: rgba(255, 255, 255, 0.74);*/
     width: 100%;
     bottom: 0px;
     position: absolute;
@@ -975,8 +975,6 @@ body {
     .test {
         background-image: url(img/infographic/);
     }
-
-
 }
 
 
