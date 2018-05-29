@@ -411,9 +411,10 @@ body {
 }
 */
 
-.infographic{
+.infographic {
     grid-row: 4;
 }
+
 .portraet {
     background-image: url(img/infographic/portraet.png);
     background-repeat: no-repeat;
@@ -707,6 +708,7 @@ body {
 }
 
 /*--- BEHIND THE BRAND VIDEO ---*/
+
 .video-container-about {
     position: relative;
     padding-bottom: 56.25%;
@@ -1036,6 +1038,10 @@ body {
         width: 10vw;
     }
 */
+    /*--- BEHIND THE BRAND VIDEO ---*/
+    .video-container-about {
+        grid-column: 2/8;
+    }
     .infograhic_01 {
         right: 4%;
         bottom: 38vw;
@@ -1159,6 +1165,8 @@ body {
         bottom: 15.5vw;
         height: 2.5vw;
         width: 7vw;
+        filter: invert(100%);
+        filter: brightness(0.2);
     }
     .infograhic_05 {
         right: 12%;
@@ -1171,6 +1179,7 @@ body {
         bottom: 3vw;
         height: 2.5vw;
         width: 7vw;
+        filter: brightness(100);
     }
 
     .modal_container {
