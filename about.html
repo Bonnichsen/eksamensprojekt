@@ -9,35 +9,55 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--- FAVIVON --->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
+<header class="header_box">
+    <div id="mySidenav" class="sidenav">
+        <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
+        <a class="nav_links" href="index.html">Frontpage</a>
+        <a class="nav_links" href="collections.html">Collections</a>
+        <a class="nav_links" href="news.html">Latest News</a>
+        <a class="nav_links" href="about.html">About</a>
+        <a class="nav_links" href="contact.html">Contact</a>
+        <a class="nav_links" href="http://nicholasnybro.tictail.com/products/" target="_blank">Go to shop</a>
+    </div>
+
+    <div>
+        <button id="openbtn" onclick="openNav()"><a id="btn_a"><i class="fa fa-bars"></i></a></button>
+    </div>
+
+    <div>
+        <button id="shopbtn"><a href="http://nicholasnybro.tictail.com/products/icons" target="_blank" id="btn_a"><i class="fa fa-shopping-cart"></i></a></button>
+    </div>
+    <div id="move_logo" class="container container_logo">
+        <div onclick="logoHref()" class="logo page_logo"></div>
+    </div>
+</header>
 
 <body>
     <section id="about" class="grid-container">
-        <div class="header_box"></div>
-        <div id="mySidenav" class="sidenav">
-            <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
-            <a class="nav_links" href="index.html">Frontpage</a>
-            <a class="nav_links" href="collections.html">Collections</a>
-            <a class="nav_links" href="news.html">Latest News</a>
-            <a class="nav_links" href="about.html">About</a>
-            <a class="nav_links" href="contact.html">Contact</a>
-            <a class="nav_links" href="http://nicholasnybro.tictail.com/products/" target="_blank">Go to shop</a>
-        </div>
-
-        <div>
-            <button id="openbtn" onclick="openNav()"><a id="btn_a"><i class="fa fa-bars"></i></a></button>
-        </div>
-
-        <div>
-            <button id="shopbtn"><a href="http://nicholasnybro.tictail.com/products/icons" target="_blank" id="btn_a"><i class="fa fa-shopping-cart"></i></a></button>
-        </div>
-        <div id="move_logo" class="container container_logo">
-            <div onclick="logoHref()" class="logo page_logo"></div>
-        </div>
 
         <div class="about_grid grid-container">
 
-            <h1 data-aboutname>ABOUT</h1>
+            <h2 data-h2>ABOUT</h2>
             <p data-abouttext>
                 Nicholas Nybro is a danish fashion designer specializing in conceptual clothing, costumes and art direction.<br><br> The clothes are avaialble at Sabine Poupinel, Copenhagen K or from our online shop.
             </p><br>
@@ -106,83 +126,38 @@
         <span class="close" onclick="closePopup();">&times;</span>
     </div>
 
-    <button class="infograhic_04" onClick="openPopup('div3');"></button>
+    <button class="infograhic_04" onClick="openPopup('div4');"></button>
 
-    <div id="div3" class="popup" style="display:none;">
+    <div id="div4" class="popup" style="display:none;">
         <div class="modal_container">
-            <h2>Fashion Illustration</h2><br>
-            <p>Apart of being a fashion designer Nicholas Nybro is also a Fashion Illustrator, who create beautiful illustrative work to showcase his concepts. Sketching is an important tool for Nicholas Nybro in his design process. Every time he gets inspired, he makes sure to sketch down fresh ideas, and therefor he will always have his sketchbook with him. </p>
+            <h2>Concept Design</h2><br>
+            <p>Nicholas Nybro is specializing in conceptual clothing, and is well known as a conceptual fashion designer, who produces fashion that questions the whole nature of fashion by using different visuals to communicating brand new ideas. </p>
         </div>
         <span class="close" onclick="closePopup();">&times;</span>
     </div>
 
-    <button class="infograhic_05" onClick="openPopup('div3');"></button>
+    <button class="infograhic_05" onClick="openPopup('div5');"></button>
 
-    <div id="div3" class="popup" style="display:none;">
+    <div id="div5" class="popup" style="display:none;">
         <div class="modal_container">
-            <h2>Fashion Illustration</h2><br>
-            <p>Apart of being a fashion designer Nicholas Nybro is also a Fashion Illustrator, who create beautiful illustrative work to showcase his concepts. Sketching is an important tool for Nicholas Nybro in his design process. Every time he gets inspired, he makes sure to sketch down fresh ideas, and therefor he will always have his sketchbook with him. </p>
-        </div>
-        <span class="close" onclick="closePopup();">&times;</span>
-    </div>
-
-    <button class="infograhic_06" onClick="openPopup('div3');"></button>
-
-    <div id="div3" class="popup" style="display:none;">
-        <div class="modal_container">
-            <h2>Fashion Illustration</h2><br>
-            <p>Apart of being a fashion designer Nicholas Nybro is also a Fashion Illustrator, who create beautiful illustrative work to showcase his concepts. Sketching is an important tool for Nicholas Nybro in his design process. Every time he gets inspired, he makes sure to sketch down fresh ideas, and therefor he will always have his sketchbook with him. </p>
-        </div>
-        <span class="close" onclick="closePopup();">&times;</span>
-    </div>
-
-    <button class="infograhic_07" onClick="openPopup('div3');"></button>
-
-    <div id="div3" class="popup" style="display:none;">
-        <div class="modal_container">
-            <h2>Fashion Illustration</h2><br>
-            <p>Apart of being a fashion designer Nicholas Nybro is also a Fashion Illustrator, who create beautiful illustrative work to showcase his concepts. Sketching is an important tool for Nicholas Nybro in his design process. Every time he gets inspired, he makes sure to sketch down fresh ideas, and therefor he will always have his sketchbook with him. </p>
+            <h2>Fashion Design</h2><br>
+            <p>Nicholas Nybro is a fashion designer with a degree from Kolding School of Design. He created the self-titled fashion brand to create attention on various society issues of today. </p>
         </div>
         <span class="close" onclick="closePopup();">&times;</span>
     </div>
 
 
+    <button class="infograhic_06" onClick="openPopup('div6');"></button>
 
-
-
-
+    <div id="div6" class="popup" style="display:none;">
+        <div class="modal_container">
+            <h2>Creative Direction</h2><br>
+            <p>Nicholas Nybro is a Creative Director for his fashion design company, and uses his skills of creativity in exercising concepts, communication, leadership and industry-related technology. </p>
+        </div>
+        <span class="close" onclick="closePopup();">&times;</span>
+    </div>
 
     <script>
-        //		------------modalvindue-------------
-
-        // Get the modal
-        var modal = document.getElementById('myModal');
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        //		------------modalvindue SLUT-------------
-
         //		------------PopUp-------------
 
         function openPopup(el) {
