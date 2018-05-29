@@ -810,7 +810,6 @@ body {
 
 .nyhedsbillede [data-billede] {
     height: 100vh;
-    top: 0;
     left: 0;
     position: fixed;
     z-index: -19;
@@ -818,7 +817,7 @@ body {
 
 .nyhedsindhold {
     margin: 40px 40px 40px 40px;
-    z-index: 53;
+    z-index: 8;
     top: 400px;
     left: 0vw;
     padding: 20px;
@@ -826,6 +825,11 @@ body {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.7);
 
+}
+
+.overflow_hidden {
+    margin-top: 400px;
+    overflow: hidden;
 }
 
 .nyhedsindhold [data-dato] {
@@ -836,14 +840,15 @@ body {
 }
 
 .nyhedsindhold [data-nyhedstitel] {
-    font-size: 1.05em;
+    font-size: 2em;
     margin: 20px 0 2px 0;
+    color: rgba(0, 0, 0, 0.7);
 
 }
 
 .nyhedsindhold [data-short_text] {
+    font-size: 1.1em;
     font-weight: 400;
-    font-size: 1em;
     margin: 10px 0 10px 0;
 }
 
@@ -945,6 +950,11 @@ body {
         width: 42vw;
     }
 
+    .nyhedsindhold {
+        max-width: 50vw;
+        left: 20vw;
+    }
+
     /*
     #myBtn {
         height: 4vw;
@@ -1018,6 +1028,21 @@ body {
     .portraet {
         height: 35vw;
         width: 35vw;
+    }
+
+    .nyhedsindhold {
+        max-width: 25vw;
+        left: 120px;
+        background-color: rgba(255, 255, 255, 0.6);
+        top: 230px;
+        overflow: hidden;
+    }
+    .nyhedsindhold [data-short_text] {
+        font-weight: 500;
+    }
+
+    .nyhedsindhold [data-lang_text] {
+        font-weight: 400;
     }
 
     /*
