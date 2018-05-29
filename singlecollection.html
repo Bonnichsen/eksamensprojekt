@@ -37,7 +37,7 @@
     <section class="grid-container">
         <div class="collection_grid grid-container">
 
-            <h2 data-contactname></h2>
+            <h2 data-h2></h2>
             <b class="headline">The SS18 collection, The Body, is all about the human body.</b>
             <p data-collectiontext>
                 <br> With this collection, Nicholas Nybro, wants to discuss the Fashion Industry's look on body ideals and show the beauty of all shapes. Instead of comparing
@@ -82,7 +82,7 @@
             templateModtager.innerHTML = "";
 
             collections.forEach(collection => {
-                document.querySelector("[data-contactname]").textContent = collection.type;
+                document.querySelector("[data-h2]").textContent = collection.type;
                 console.log(collection);
                 let klon = template.cloneNode(true).content;
                 klon.querySelector("[data-billede]").src = collection.acf.img_url;
