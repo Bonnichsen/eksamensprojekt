@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<header class="header_box">
+    <div id="mySidenav" class="sidenav">
+        <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
+        <a class="nav_links" href="index.html">Frontpage</a>
+        <a class="nav_links" href="collections.html">Collections</a>
+        <a class="nav_links" href="news.html">Latest News</a>
+        <a class="nav_links" href="about.html">About</a>
+        <a class="nav_links" href="contact.html">Contact</a>
+        <a class="nav_links" href="http://nicholasnybro.tictail.com/products/" target="_blank">Go to shop</a>
+    </div>
+
+    <div>
+        <button id="openbtn" onclick="openNav()"><a id="btn_a"><i class="fa fa-bars"></i></a></button>
+    </div>
+
+    <div>
+        <button id="shopbtn"><a href="http://nicholasnybro.tictail.com/products/icons" target="_blank" id="btn_a"><i class="fa fa-shopping-cart"></i></a></button>
+    </div>
+    <div id="move_logo" class="container container_logo">
+        <div onclick="logoHref()" class="logo page_logo"></div>
+    </div>
+</header>
+
+<body>
+    <section class="grid-container" data-container>
+
+        <article>
+            <div class="nyhedsbillede"><img src="" alt="-" data-billede></div>
+            <div class="nyhedsindhold">
+                <p data-dato></p>
+                <h2 data-nyhedstitel></h2>
+                <h3 data-short_text></h3>
+                <p data-lang_text></p>
+            </div>
+        </article>
+
+    </section>
+
+
+    <template data-template>
+<article>
+    <div class="img_container"><img src="" alt="-" data-billede data-button-img></div>
+</article>
+   </template>
+
+
+    <script>
+        let url = new URL(window.location.href);
+        let searchParams = new URLSearchParams(url.search);
+        let id = searchParams.get("id");
+        let apiURL = "http://benjaminbonnichsen.dk/eksamensprojekt/wordpress/wp-json/wp/v2/news?per_page=100" + id;
+        let nyhed = {};
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        async function hentJson() {
+            let dataJson = await fetch(apiURL);
+            nyhed = await dataJson.json();
+            console.log("It's so fetch to be single, Gretchen!");
+            visNyhed();
+        };
+
+        function visNyhed() {
+            let display = document.querySelector("[grid-container]");
+            console.log("halla");
+
+            display.querySelector("[data-nyhedstitel]").textContent = nyhed.title.rendered;
+            display.querySelector("[data-billede]").src = news.acf.billede;
+            display.querySelector("[data-short_text]").textContent = news.acf.short_text;
+            display.querySelector("[data-dato]").textContent = news.acf.dato;
+            display.querySelector("[data-lang_text]").innerHTML = news.acf.lang_text;
+
+            console.log("You're now in singleview!")
+        };
+    </script>
+</body>
+
+</html>
