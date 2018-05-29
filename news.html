@@ -80,24 +80,24 @@
                 klon.querySelector("[data-short_text]").textContent = nyhed.acf.short_text;
                 klon.querySelector("[data-dato]").textContent = nyhed.acf.dato;
 
-                //                klon.querySelector("[data-button]").addEventListener("click", () => {
-                //                    location.href = "nyhed.html?id=" + nyhed.id;
-                //                });
-                //                klon.querySelector("[data-button-image]").addEventListener("click", () => {
-                //                    location.href = "nyhed.html?id=" + nyhed.id;
-                //                });
-                //                klon.querySelector("[data-button-tekst]").addEventListener("click", () => {
-                //                    location.href = "nyhed.html?id=" + nyhed.id;
-                //                });
-                //                klon.querySelector("[data-button-dato]").addEventListener("click", () => {
-                //                    location.href = "nyhed.html?id=" + nyhed.id;
-                //                });
-                //                klon.querySelector("[data-button-nyhedstitel]").addEventListener("click", () => {
-                //                    location.href = "nyhed.html?id=" + nyhed.id;
-                //                });
-                //                klon.querySelector("[data-button-short_text]").addEventListener("click", () => {
-                //                    location.href = "nyhed.html?id=" + nyhed.id;
-                //                });
+                klon.querySelector("[data-button]").addEventListener("click", () => {
+                    location.href = "singlenews.html?id=" + nyhed.id;
+                });
+                klon.querySelector("[data-button-image]").addEventListener("click", () => {
+                    location.href = "singlenews.html?id=" + nyhed.id;
+                });
+                klon.querySelector("[data-button-tekst]").addEventListener("click", () => {
+                    location.href = "singlenews.html?id=" + nyhed.id;
+                });
+                klon.querySelector("[data-button-dato]").addEventListener("click", () => {
+                    location.href = "singlenews.html?id=" + nyhed.id;
+                });
+                klon.querySelector("[data-button-nyhedstitel]").addEventListener("click", () => {
+                    location.href = "singlenews.html?id=" + nyhed.id;
+                });
+                klon.querySelector("[data-button-short_text]").addEventListener("click", () => {
+                    location.href = "singlenews.html?id=" + nyhed.id;
+                });
 
 
 
@@ -144,7 +144,6 @@
             document.getElementById("move_logo").style.marginLeft = "0";
             document.getElementById("openbtn").style.marginLeft = "0";;
         }
-
     </script>
 </body>
 

@@ -60,7 +60,7 @@
         let url = new URL(window.location.href);
         let searchParams = new URLSearchParams(url.search);
         let id = searchParams.get("id");
-        let apiURL = "http://benjaminbonnichsen.dk/eksamensprojekt/wordpress/wp-json/wp/v2/news?per_page=100" + id;
+        let apiURL = "http://benjaminbonnichsen.dk/eksamensprojekt/wordpress/wp-json/wp/v2/news/" + id + "?per_page=100";
         let nyhed = {};
 
         document.addEventListener("DOMContentLoaded", hentJson);
@@ -73,17 +73,18 @@
         };
 
         function visNyhed() {
-            let display = document.querySelector("[grid-container]");
+            let display = document.querySelector("[data-container]");
             console.log("halla");
 
             display.querySelector("[data-nyhedstitel]").textContent = nyhed.title.rendered;
-            display.querySelector("[data-billede]").src = news.acf.billede;
-            display.querySelector("[data-short_text]").textContent = news.acf.short_text;
-            display.querySelector("[data-dato]").textContent = news.acf.dato;
-            display.querySelector("[data-lang_text]").innerHTML = news.acf.lang_text;
+            display.querySelector("[data-billede]").src = nyhed.acf.billede;
+            display.querySelector("[data-short_text]").textContent = nyhed.acf.short_text;
+            display.querySelector("[data-dato]").textContent = nyhed.acf.dato;
+            display.querySelector("[data-lang_text]").innerHTML = nyhed.acf.lang_tekst;
 
             console.log("You're now in singleview!")
         };
+
     </script>
 </body>
 
