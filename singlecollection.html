@@ -62,7 +62,7 @@
     <script>
         let url = new URL(window.location.href);
         let searchParams = new URLSearchParams(url.search);
-        let id = searchParams.get("collection");
+        let id = searchParams.get("id");
         let apiURL = "http://benjaminbonnichsen.dk/eksamensprojekt/wordpress/wp-json/wp/v2/categories/" + id + "?per_page=100/"
         let collections = [];
 

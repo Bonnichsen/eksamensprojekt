@@ -77,7 +77,7 @@
                 klon.querySelector("[data-collection_name]").textContent = collection.title.rendered;
                 klon.querySelector("[data-collection]").src = collection.acf.image;
                 klon.querySelector(".collections_article").addEventListener("click", () => {
-                    location.href = "collection.html?collection=" + collection.acf.id_ref;
+                    location.href = "singlecollection.html?collection=" + collection.acf.id_ref;
                 });
 
                 templateModtager.appendChild(klon);
