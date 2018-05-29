@@ -533,8 +533,8 @@ body {
     background-image: url(img/infographic/fi.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    right: 35%;
-    bottom: 41%;
+    right: 26%;
+    bottom: 37%;
     border: none;
     height: 8.5vw;
     width: 25vw;
@@ -558,11 +558,11 @@ body {
 }
 
 .infograhic_04 {
-    background-image: url(img/infographic/ci.png);
+    background-image: url(img/infographic/cd_1.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    right: 10%;
-    bottom: 21%;
+    right: 4%;
+    bottom: 4%;
     border: none;
     height: 8.5vw;
     width: 25vw;
@@ -576,7 +576,7 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     right: 27%;
-    bottom: 8%;
+    bottom: 10%;
     border: none;
     height: 8.5vw;
     width: 25vw;
@@ -584,27 +584,14 @@ body {
     position: absolute;
     cursor: pointer;
 }
+
 
 .infograhic_06 {
-    background-image: url(img/infographic/cd2.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    right: 4%;
-    bottom: 2%;
-    border: none;
-    height: 8.5vw;
-    width: 25vw;
-    background-color: rgba(0, 0, 0, 0);
-    position: absolute;
-    cursor: pointer;
-}
-
-.infograhic_07 {
     background-image: url(img/infographic/cd.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    right: 60%;
-    bottom: 20%;
+    right: 12%;
+    bottom: 21%;
     border: none;
     height: 8.5vw;
     width: 25vw;
@@ -639,14 +626,16 @@ body {
 }
 
 .modal_container {
+    background-color: #ffeae6;
     margin: 0 5vw;
     padding: 15px;
     position: fixed;
     padding-top: 35px;
     padding-bottom: 35px;
     margin: 0 5vw;
-    background-color: #f3e1dc;
     z-index: -1;
+    cursor: default;
+
 }
 
 /*
@@ -731,9 +720,10 @@ body {
 
 /*--- NEWS ---*/
 
-.news-container{
+.news-container {
     grid-column: 3/11;
 }
+
 .news_article {
     margin-bottom: 20px;
     position: relative;
@@ -927,8 +917,8 @@ body {
         width: 10vw;
     }
     .infograhic_02 {
-        right: 12%;
-        bottom: 30vw;
+        right: 13%;
+        bottom: 33vw;
         height: 4vw;
         width: 10vw;
     }
@@ -940,7 +930,7 @@ body {
     }
     .infograhic_04 {
         right: 8%;
-        bottom: 19vw;
+        bottom: 4vw;
         height: 4vw;
         width: 10vw;
     }
@@ -951,23 +941,12 @@ body {
         width: 10vw;
     }
     .infograhic_06 {
-        right: 4%;
-        bottom: 3vw;
+        right: 6%;
+        bottom: 19vw;
         height: 4vw;
         width: 10vw;
     }
-    .infograhic_07 {
-        right: 30%;
-        bottom: 16vw;
-        height: 4vw;
-        width: 10vw;
-    }
-    .infograhic_08 {
-        right: 18%;
-        bottom: 35vw;
-        height: 4vw;
-        width: 10vw;
-    }
+
 
     .test {
         background-image: url(img/infographic/);
@@ -1043,17 +1022,19 @@ body {
         height: 2.5vw;
         width: 7vw;
     }
-    .infograhic_07 {
-        right: 25%;
-        bottom: 16vw;
-        height: 2.5vw;
-        width: 7vw;
-    }
-    .infograhic_08 {
-        right: 18%;
-        bottom: 30vw;
-        height: 2.5vw;
-        width: 7vw;
+
+    .modal_container {
+        background-color: #ffeae6;
+        margin: 0 5vw;
+        padding: 15px;
+        position: fixed;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        margin: 0 5vw;
+        z-index: -1;
+        cursor: default;
+        width: 90vw;
+
     }
 
     .test {
