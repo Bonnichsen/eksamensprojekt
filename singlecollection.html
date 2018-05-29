@@ -37,13 +37,13 @@
     <section class="grid-container">
         <div class="collection_grid grid-container">
 
-            <h2 data-collectionname>SS18</h2>
+            <h2 data-contactname></h2>
             <b class="headline">The SS18 collection, The Body, is all about the human body.</b>
             <p data-collectiontext>
                 <br> With this collection, Nicholas Nybro, wants to discuss the Fashion Industry's look on body ideals and show the beauty of all shapes. Instead of comparing
             </p>
             <div class="video-container">
-                <iframe width="853" height="480" src="https://www.youtube.com/embed/z9Ul9ccDOqE" frameborder="0" allowfullscreen></iframe>
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/nQXrUwDqJKM?&hd=1" frameborder="0" allowfullscreen></iframe>
             </div>
 
             <section data-container>
@@ -62,8 +62,8 @@
     <script>
         let url = new URL(window.location.href);
         let searchParams = new URLSearchParams(url.search);
-        let id = searchParams.get("id");
-        let apiURL = "http://benjaminbonnichsen.dk/eksamensprojekt/wordpress/wp-json/wp/v2/categories/" + id + "?per_page=100/"
+        let id = searchParams.get("name");
+        let apiURL = "http://benjaminbonnichsen.dk/eksamensprojekt/wordpress/wp-json/wp/v2/" + id + "?per_page=100"
         let collections = [];
 
         document.addEventListener("DOMContentLoaded", hentJson);
@@ -77,11 +77,15 @@
 
 
         function visCollections() {
+            let template = document.querySelector("[data-template]");
+            let templateModtager = document.querySelector("[data-container]");
+            templateModtager.innerHTML = "";
+
             collections.forEach(collection => {
-                console.log(collections);
-                let templateModtager = document.querySelector("[data-container]");
+                document.querySelector("[data-contactname]").textContent = collection.type;
+                console.log(collection);
                 let klon = template.cloneNode(true).content;
-                klon.querySelector("[data-billede]").src = collection.acf.ss18;
+                klon.querySelector("[data-billede]").src = collection.acf.img_url;
                 templateModtager.appendChild(klon);
                 console.log("The Klon War is over!")
             });

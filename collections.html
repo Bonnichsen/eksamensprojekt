@@ -36,8 +36,8 @@
 
 <body>
     <section class="grid-container">
-
         <div class="collection_grid grid-container">
+           <h2 data-contactname>COLLECTIONS</h2>
             <section data-container-collections>
             </section>
         </div>
@@ -49,6 +49,7 @@
           <img class="image_collection" src="" alt="-" data-collection data-button-img>
           <div class="overlay">
               <h3 data-collection_name></h3>
+
           </div>
         </article>
    </template>
@@ -77,7 +78,7 @@
                 klon.querySelector("[data-collection_name]").textContent = collection.title.rendered;
                 klon.querySelector("[data-collection]").src = collection.acf.image;
                 klon.querySelector(".collections_article").addEventListener("click", () => {
-                    location.href = "singlecollection.html?collection=" + collection.acf.id_ref;
+                    location.href = "singlecollection.html?name=" + collection.title.rendered;
                 });
 
                 templateModtager.appendChild(klon);

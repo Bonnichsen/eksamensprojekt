@@ -300,6 +300,7 @@ body {
     -moz-transition: 0.6s;
     -ms-transition: 0.6s;
     transition: 0.6s;
+    cursor: pointer;
 }
 
 [data-collection_name] {
@@ -367,6 +368,7 @@ body {
     text-align: center;
     font-weight: 800;
     padding: 20px 0;
+    text-transform: uppercase;
 }
 
 [data-collectionname-h1] {
