@@ -13,7 +13,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(12, 1fr);
 }
 
 /*--- LOGO ---*/
@@ -659,7 +659,7 @@ body {
 
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(12, 1fr);
     }
     [data-container] {
         display: grid;
