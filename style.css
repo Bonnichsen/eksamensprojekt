@@ -816,20 +816,7 @@ body {
 }
 
 .nyhedsindhold {
-    margin: 40px 40px 40px 40px;
-    z-index: 8;
-    top: 400px;
-    left: 0vw;
     padding: 20px;
-    height: auto;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.7);
-
-}
-
-.overflow_hidden {
-    margin-top: 400px;
-    overflow: hidden;
 }
 
 .nyhedsindhold [data-dato] {
@@ -843,7 +830,6 @@ body {
     font-size: 2em;
     margin: 20px 0 2px 0;
     color: rgba(0, 0, 0, 0.7);
-
 }
 
 .nyhedsindhold [data-short_text] {
@@ -858,6 +844,49 @@ body {
     margin: 15px 0 0 0;
 }
 
+/*--- SCROLLING INSIDE DIV ---*/
+
+.d1 {
+    margin-top: 80px;
+    position: fixed;
+    height: 500px;
+    width: 70vw;
+}
+
+.d2 {
+    height: 100%;
+}
+
+.d3 {
+    height: 100%;
+    position: relative;
+}
+
+.d3-1 {
+    height: 50px;
+}
+
+.d3-2 {
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-top: 50px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.d4 {
+    position: relative;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.d5 {
+    height: 570px;
+}
 
 /*---- CONTACT ----*/
 
@@ -950,6 +979,9 @@ body {
         width: 42vw;
     }
 
+    .d1 {
+        width: 50vw;
+    }
     .nyhedsindhold {
         max-width: 50vw;
         left: 20vw;
@@ -1030,10 +1062,12 @@ body {
         width: 35vw;
     }
 
+    .d1 {
+        width: 25vw;
+    }
     .nyhedsindhold {
         max-width: 25vw;
         left: 120px;
-        background-color: rgba(255, 255, 255, 0.6);
         top: 230px;
         overflow: hidden;
     }
