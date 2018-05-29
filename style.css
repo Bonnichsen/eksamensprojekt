@@ -379,7 +379,7 @@ body {
 
 .collection_grid {
     grid-template-columns: repeat(12, 1fr);
-    margin: 150px 30px;
+    margin: 120px 30px;
     grid-column: 1/13;
 }
 
