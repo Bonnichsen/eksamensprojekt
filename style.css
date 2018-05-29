@@ -389,6 +389,11 @@ body {
     width: 100%;
 }
 
+.collection_grid {
+    grid-template-columns: repeat(12, 1fr);
+    margin: 120px 30px;
+}
+
 /*---- ABOUT ----*/
 
 #about .header_box {
@@ -607,9 +612,10 @@ body {
 
 /*--- NEWS ---*/
 
-.news-container{
-    grid-column: 3/11;
+.news-container {
+    grid-column: 2/12;
 }
+
 .news_article {
     margin-bottom: 20px;
     position: relative;
@@ -626,7 +632,7 @@ body {
 
 .nyheder img {
     width: 100%;
-
+    height: 100%;
 }
 
 .nyheder h2 {
@@ -642,7 +648,7 @@ body {
     position: absolute;
     cursor: pointer;
     font-size: 0.7em;
-    bottom: 70px;
+    bottom: 80px;
     margin-left: 1vw;
 }
 
@@ -690,9 +696,8 @@ body {
     background: linear-gradient(transparent, #ad9792);
     /*            background-color: rgba(255, 255, 255, 0.74);*/
     width: 100%;
-    bottom: 0;
+    bottom: 0px;
     position: absolute;
-    margin: 22vw 0 0 0;
     cursor: pointer;
     height: 200px;
     color: white;
@@ -740,8 +745,6 @@ body {
     font-weight: 500;
     background-color: #332F2D
 }
-
-/*--- MEDIA QUERIES ---*/
 
 /*----- IPAD ------*/
 
@@ -842,6 +845,7 @@ body {
 
     [data-container] {
         grid-template-columns: repeat(3, 1fr);
+        grid-column: 2/12;
     }
 
     .image_collection {
