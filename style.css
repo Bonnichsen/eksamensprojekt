@@ -414,16 +414,18 @@ body {
     grid-column: 2/12;
 }
 
+/*
 .test {
     position: absolute;
     background-image: url(img/infographic/test.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 60vw;
-    width: 80vw;
-    top: 53vw;
+    height: 200px;
+    width: 300px;
+    top: 215px;
 
 }
+*/
 
 .portraet {
     background-image: url(img/infographic/portraet.png);
@@ -612,6 +614,10 @@ body {
     margin: 120px 0 140px 0;
 }
 
+.contact_grid_content {
+    grid-column: 2/12
+}
+
 [data-contactname] {
     grid-column: 2/12;
     text-align: center;
@@ -688,6 +694,54 @@ body {
         text-align: left;
     }
 
+    .portraet {
+        height: 42vw;
+        width: 42vw;
+    }
+
+    #myBtn {
+        height: 4vw;
+        width: 10vw;
+    }
+
+    .infograhic_01 {
+        right: 4%;
+        bottom: 38vw;
+    }
+    .infograhic_02 {
+        right: 12%;
+        bottom: 30vw;
+    }
+    .infograhic_03 {
+        right: 4%;
+        bottom: 24vw;
+    }
+    .infograhic_04 {
+        right: 8%;
+        bottom: 19vw;
+    }
+    .infograhic_05 {
+        right: 12%;
+        bottom: 9vw;
+    }
+    .infograhic_06 {
+        right: 4%;
+        bottom: 3vw;
+    }
+    .infograhic_07 {
+        right: 30%;
+        bottom: 16vw;
+    }
+    .infograhic_08 {
+        right: 18%;
+        bottom: 35vw;
+    }
+
+    .test {
+        background-image: url(img/infographic/);
+    }
+
+
 }
 
 
@@ -709,4 +763,50 @@ body {
 
     .collections_article:hover {
         transform: scale(1.05);
+    }
+    .portraet {
+        height: 35vw;
+        width: 35vw;
+    }
+
+    #myBtn {
+        height: 2.5vw;
+        width: 7vw;
+    }
+
+    .infograhic_01 {
+        right: 4%;
+        bottom: 32.4vw;
+    }
+    .infograhic_02 {
+        right: 12%;
+        bottom: 27vw;
+    }
+    .infograhic_03 {
+        right: 4%;
+        bottom: 20vw;
+    }
+    .infograhic_04 {
+        right: 8%;
+        bottom: 15.5vw;
+    }
+    .infograhic_05 {
+        right: 12%;
+        bottom: 7vw;
+    }
+    .infograhic_06 {
+        right: 4%;
+        bottom: 3vw;
+    }
+    .infograhic_07 {
+        right: 25%;
+        bottom: 16vw;
+    }
+    .infograhic_08 {
+        right: 18%;
+        bottom: 30vw;
+    }
+
+    .test {
+        background-image: url(img/infographic/);
     }
