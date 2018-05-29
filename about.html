@@ -51,11 +51,8 @@
 
         </div>
 
-        <!-- The Modal -->
+        <!--
         <div id="myModal" class="modal">
-
-
-            <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
 
@@ -70,21 +67,86 @@
             </div>
         </div>
 
-
-
         <section class="info_graphic">
-            <!-- Trigger/Open The Modal -->
             <button id="myBtn" class="infograhic_01"></button>
-            <button id="myBtn" class="infograhic_02"></button>
-            <button id="myBtn" class="infograhic_03"></button>
-            <button id="myBtn" class="infograhic_04"></button>
-            <button id="myBtn" class="infograhic_05"></button>
-            <button id="myBtn" class="infograhic_06"></button>
-            <button id="myBtn" class="infograhic_07"></button>
-            <button id="myBtn" class="infograhic_08"></button>
         </section>
+-->
+
+
 
     </section>
+
+    <button class="infograhic_01" onClick="openPopup('div1');"></button>
+
+    <div id="div1" class="popup" style="display:none;">
+        <div class="modal_container">
+            <h2>Textiles</h2><br>
+            <p>Nicholas Nybro works with different kinds of textiles in the making of his collections. The textiles are carefully selected so that they match the theme of his new SS18 The Body collection. The fascination of the human body and its different shapes, are what inspirers Nicholas Nybro in his creative work of designing unique clothing. The color of the textiles is ranging from delicate blue-ish and beige nuances to the darker warmer brown, so they represent all kinds of skin colors.</p>
+        </div>
+        <span class="close" onclick="closePopup();">&times;</span>
+    </div>
+
+    <button class="infograhic_02" onClick="openPopup('div2');"></button>
+
+    <div id="div2" class="popup" style="display:none;">
+        <div class="modal_container">
+            <h2>Fashion Illustration</h2><br>
+            <p>Apart of being a fashion designer Nicholas Nybro is also a Fashion Illustrator, who create beautiful illustrative work to showcase his concepts. Sketching is an important tool for Nicholas Nybro in his design process. Every time he gets inspired, he makes sure to sketch down fresh ideas, and therefor he will always have his sketchbook with him. </p>
+        </div>
+        <span class="close" onclick="closePopup();">&times;</span>
+    </div>
+
+    <button class="infograhic_03" onClick="openPopup('div3');"></button>
+
+    <div id="div3" class="popup" style="display:none;">
+        <div class="modal_container">
+            <h2>Art Direction</h2><br>
+            <p>Nicholas Nybro has former experience with art direction from BERDAL&NYBRO and is currently the Art Director for the fashion company Ivan Grundahl. </p>
+        </div>
+        <span class="close" onclick="closePopup();">&times;</span>
+    </div>
+
+    <button class="infograhic_04" onClick="openPopup('div3');"></button>
+
+    <div id="div3" class="popup" style="display:none;">
+        <div class="modal_container">
+            <h2>Fashion Illustration</h2><br>
+            <p>Apart of being a fashion designer Nicholas Nybro is also a Fashion Illustrator, who create beautiful illustrative work to showcase his concepts. Sketching is an important tool for Nicholas Nybro in his design process. Every time he gets inspired, he makes sure to sketch down fresh ideas, and therefor he will always have his sketchbook with him. </p>
+        </div>
+        <span class="close" onclick="closePopup();">&times;</span>
+    </div>
+
+    <button class="infograhic_05" onClick="openPopup('div3');"></button>
+
+    <div id="div3" class="popup" style="display:none;">
+        <div class="modal_container">
+            <h2>Fashion Illustration</h2><br>
+            <p>Apart of being a fashion designer Nicholas Nybro is also a Fashion Illustrator, who create beautiful illustrative work to showcase his concepts. Sketching is an important tool for Nicholas Nybro in his design process. Every time he gets inspired, he makes sure to sketch down fresh ideas, and therefor he will always have his sketchbook with him. </p>
+        </div>
+        <span class="close" onclick="closePopup();">&times;</span>
+    </div>
+
+    <button class="infograhic_06" onClick="openPopup('div3');"></button>
+
+    <div id="div3" class="popup" style="display:none;">
+        <div class="modal_container">
+            <h2>Fashion Illustration</h2><br>
+            <p>Apart of being a fashion designer Nicholas Nybro is also a Fashion Illustrator, who create beautiful illustrative work to showcase his concepts. Sketching is an important tool for Nicholas Nybro in his design process. Every time he gets inspired, he makes sure to sketch down fresh ideas, and therefor he will always have his sketchbook with him. </p>
+        </div>
+        <span class="close" onclick="closePopup();">&times;</span>
+    </div>
+
+    <button class="infograhic_07" onClick="openPopup('div3');"></button>
+
+    <div id="div3" class="popup" style="display:none;">
+        <div class="modal_container">
+            <h2>Fashion Illustration</h2><br>
+            <p>Apart of being a fashion designer Nicholas Nybro is also a Fashion Illustrator, who create beautiful illustrative work to showcase his concepts. Sketching is an important tool for Nicholas Nybro in his design process. Every time he gets inspired, he makes sure to sketch down fresh ideas, and therefor he will always have his sketchbook with him. </p>
+        </div>
+        <span class="close" onclick="closePopup();">&times;</span>
+    </div>
+
+
 
 
 
@@ -121,8 +183,18 @@
 
         //		------------modalvindue SLUT-------------
 
+        //		------------PopUp-------------
 
+        function openPopup(el) {
+            $('.popup').hide();
+            $('#' + el).fadeIn(200);
+        }
 
+        function closePopup() {
+            $('.popup').fadeOut(300);
+        }
+
+        //		------------PopUpEND-------------
 
         function logoHref() {
             document.querySelector(".logo").addEventListener("click", () => {
