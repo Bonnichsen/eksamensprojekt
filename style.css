@@ -411,6 +411,9 @@ body {
 }
 */
 
+.infographic{
+    grid-row: 4;
+}
 .portraet {
     background-image: url(img/infographic/portraet.png);
     background-repeat: no-repeat;
@@ -696,6 +699,27 @@ body {
 .video-container iframe,
 .video-container object,
 .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*--- BEHIND THE BRAND VIDEO ---*/
+.video-container-about {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    grid-column: 2/12;
+    grid-row: 3;
+    margin-bottom: 2.5vw;
+}
+
+.video-container-about iframe,
+.video-container-about object,
+.video-container-about embed {
     position: absolute;
     top: 0;
     left: 0;
