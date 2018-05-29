@@ -115,7 +115,7 @@ body {
 
 .frontpage_some .fa {
     font-size: 2.5em;
-    color: rgba(0, 0, 0, 0.75)!important;
+    color: rgba(255, 234, 230, 0.74)!important;
     padding: 10px;
     text-align: center;
     cursor: pointer;
@@ -812,7 +812,8 @@ body {
 }
 
 .nyheder .boks {
-    background: linear-gradient(transparent, #ad9792);
+    /*    background: linear-gradient(transparent, #ad9792);*/
+    background-color: rgba(255, 234, 230, 0.49);
     width: 100%;
     bottom: 0px;
     position: absolute;
@@ -829,18 +830,29 @@ body {
     position: fixed;
     overflow: hidden;
     text-align: center;
-
 }
 
 .nyhedsbillede [data-billede] {
-    height: 100vh;
-    left: 0;
+    width: auto;
+    min-height: 100vh;
+    top: 120px;
+    left: -90vw;
     position: fixed;
     z-index: -19;
 }
 
+.overlay_news {
+    background-color: rgba(255, 234, 230, 0.30);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+}
+
 .nyhedsindhold {
     padding: 20px;
+    z-index: 2;
 }
 
 .nyhedsindhold [data-dato] {
@@ -873,8 +885,9 @@ body {
 .d1 {
     margin-top: 80px;
     position: fixed;
-    height: 500px;
+    height: 470px;
     width: 70vw;
+    z-index: 2;
 }
 
 .d2 {
@@ -1011,6 +1024,12 @@ body {
         left: 20vw;
     }
 
+    .nyhedsbillede [data-billede] {
+        min-width: 100%;
+        min-height: 100vh;
+        left: -40vw;
+    }
+
     /*
     #myBtn {
         height: 4vw;
@@ -1062,6 +1081,14 @@ body {
 
 
 /*---- DESKTOP ----*/
+
+@media screen and (min-width: 900px) {
+    .nyhedsbillede [data-billede] {
+        min-width: 100%;
+        min-height: 100vh;
+        left: 0;
+    }
+}
 
 @media screen and (min-width: 1025px) {
 
