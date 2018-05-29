@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <section class="grid-container">
+    <section id="about" class="grid-container">
         <div class="header_box"></div>
         <div id="mySidenav" class="sidenav">
             <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
@@ -37,30 +37,52 @@
 
         <div class="about_grid grid-container">
 
-            <h1 data-collectionname-h1>ABOUT</h1>
-            <p data-collectiontext>
+            <h1 data-aboutname>ABOUT</h1>
+            <p data-abouttext>
                 Nicholas Nybro is a danish fashion designer specializing in conceptual clothing, costumes and art direction.<br><br> The clothes are avaialble at Sabine Poupinel, Copenhagen K or from our online shop.
-            </p>
+            </p><br>
 
-
-
-
+            <div class="test"></div>
 
             <div class="infographic">
                 <div class="portraet"></div>
-                <div class="infographic_01"></div>
-                <div class="billede2"></div>
-                <div class="billede3"></div>
-                <div class="billede4"></div>
-                <div class="billede5"></div>
-                <div class="billede6"></div>
-                <div class="billede7"></div>
-                <div class="billede8"></div>
             </div>
 
 
         </div>
 
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+
+                <form action="/action_page.php">
+                    <div class="modal_container">
+                        <h2>Textiles</h2><br>
+                        <p>Nicholas Nybro works with different kinds of textiles in the making of his collections. The textiles are carefully selected so that they match the theme of his new SS18 The Body collection. The fascination of the human body and its different shapes, are what inspirers Nicholas Nybro in his creative work of designing unique clothing. The color of the textiles is ranging from delicate blue-ish and beige nuances to the darker warmer brown, so they represent all kinds of skin colors.</p>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+
+
+        <section class="info_graphic">
+            <!-- Trigger/Open The Modal -->
+            <button id="myBtn" class="infograhic_01"></button>
+            <button id="myBtn" class="infograhic_02"></button>
+            <button id="myBtn" class="infograhic_03"></button>
+            <button id="myBtn" class="infograhic_04"></button>
+            <button id="myBtn" class="infograhic_05"></button>
+            <button id="myBtn" class="infograhic_06"></button>
+            <button id="myBtn" class="infograhic_07"></button>
+            <button id="myBtn" class="infograhic_08"></button>
+        </section>
 
     </section>
 
@@ -68,8 +90,40 @@
 
 
 
-
     <script>
+        //		------------modalvindue-------------
+
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        //		------------modalvindue SLUT-------------
+
+
+
+
         function logoHref() {
             document.querySelector(".logo").addEventListener("click", () => {
                 location.href = "index.html";
@@ -107,6 +161,7 @@
             document.getElementById("openbtn").style.marginLeft = "0";;
         }
     </script>
+
 </body>
 
 </html>
