@@ -62,7 +62,7 @@
                 <br> With this collection, Nicholas Nybro, wants to discuss the Fashion Industry's look on body ideals and show the beauty of all shapes. Instead of comparing ourselves with each other, we should embrace our shape and flaws.
             </p>
             <div class="video-container">
-                <iframe width="853" height="480" src="https://www.youtube.com/embed/nQXrUwDqJKM?&hd=1" frameborder="0" allowfullscreen></iframe>
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/nQXrUwDqJKM" frameborder="0" allowfullscreen data-video></iframe>
             </div>
 
             <section data-container>
@@ -102,6 +102,7 @@
 
             collections.forEach(collection => {
                 document.querySelector("[data-h2]").textContent = collection.type;
+
                 console.log(collection);
                 let klon = template.cloneNode(true).content;
                 klon.querySelector("[data-billede]").src = collection.acf.img_url;
