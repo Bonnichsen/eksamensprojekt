@@ -390,45 +390,17 @@ body {
 }
 
 .about_grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 2fr 2fr 2fr;
     grid-column: 2/12;
     margin: 120px 0 0 0;
 }
 
 [data-abouttext] {
     grid-column: 2/12;
+    margin-bottom: 30px;
 }
-
-/*
-.test {
-    position: absolute;
-    background-image: url(img/infographic/test.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 200px;
-    width: 300px;
-    top: 215px;
-
-}
-*/
-
-.infographic {
-    grid-row: 5;
-
-}
-
-.portraet {
-    background-image: url(img/infographic/portraet.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 90vw;
-    width: 90vw;
-    position: absolute;
-    right: 0%;
-    bottom: -25%;
-}
-
-
-
 
 /*modalvinde*/
 
@@ -493,16 +465,6 @@ body {
     cursor: pointer;
 }
 
-/*
-#myBtn {
-    height: 8.5vw;
-    width: 25vw;
-    position: absolute;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0);
-}
-*/
-
 .info_g:hover {
     transform: scale(1.15);
     -webkit-transition: all 0.5s;
@@ -511,19 +473,43 @@ body {
     transition: all 0.5s;
 }
 
+/*--- INFOGRAPHIC ---*/
+
+.infographic {
+    position: relative;
+    grid-column: 2/12;
+    grid-row: 4;
+    height: 157%;
+}
+
+.portraet {
+    background-image: url(img/infographic/portraet.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.buttons_info {
+    height: 157%;
+    grid-row: 4;
+    grid-column: 2/12;
+    position: relative;
+    z-index: 2222;
+}
+
 .infograhic_01 {
     background-image: url(img/infographic/t.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    right: 4%;
-    bottom: 18%;
+    right: 15px;
+    top: 10px;
     border: none;
-    height: 8.5vw;
-    width: 25vw;
+    height: 6.5vw;
+    width: 19vw;
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
     cursor: pointer;
-
 }
 
 
@@ -531,11 +517,11 @@ body {
     background-image: url(img/infographic/fi.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    right: 26%;
-    bottom: 12%;
+    right: 85px;
+    top: 50px;
     border: none;
-    height: 8.5vw;
-    width: 25vw;
+    height: 6.5vw;
+    width: 19vw;
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
     cursor: pointer;
@@ -545,11 +531,11 @@ body {
     background-image: url(img/infographic/ad.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    right: 4%;
-    bottom: 2%;
+    left: 187px;
+    top: 110px;
     border: none;
-    height: 8.5vw;
-    width: 25vw;
+    height: 6.5vw;
+    width: 19vw;
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
     cursor: pointer;
@@ -559,11 +545,11 @@ body {
     background-image: url(img/infographic/cd_1.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    right: 4%;
-    bottom: -22%;
+    right: 10px;
+    top: 240px;
     border: none;
-    height: 8.5vw;
-    width: 25vw;
+    height: 6.5vw;
+    width: 19vw;
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
     cursor: pointer;
@@ -573,11 +559,11 @@ body {
     background-image: url(img/infographic/fd.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    right: 27%;
-    bottom: -15%;
+    right: 93px;
+    top: 210px;
     border: none;
-    height: 8.5vw;
-    width: 25vw;
+    height: 6.5vw;
+    width: 19vw;
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
     cursor: pointer;
@@ -588,11 +574,11 @@ body {
     background-image: url(img/infographic/cd.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    right: 12%;
-    bottom: -4%;
+    top: 146px;
+    left: 165px;
     border: none;
-    height: 8.5vw;
-    width: 25vw;
+    height: 6.5vw;
+    width: 19vw;
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
     cursor: pointer;
@@ -635,17 +621,6 @@ body {
     cursor: default;
 
 }
-
-/*
-.pink_box {
-    position: fixed;
-    padding-top: 100px;
-    margin: 0 5vw;
-    background-color: #f3e1dc;
-    width: 90vw;
-    z-index: -1;
-}
-*/
 
 .modal {
     display: none;
@@ -981,19 +956,77 @@ body {
     background-color: #332F2D
 }
 
-/*----- IPAD ------*/
 
 @media screen and (min-width: 450px) {
-    .portraet {
-        bottom: -35%;
+    .about_grid {
+        grid-template-rows: 1fr;
     }
+
+    .buttons_info {
+        height: 0%;
+    }
+
+    .infographic {
+        height: 0%;
+    }
+
+    .video-container-about {
+        grid-column: 2/12;
+        margin-top: 20px;
+    }
+
+    .portraet {
+        width: 60vw;
+        height: 60vw;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    .infograhic_01 {
+        right: 10%;
+        top: 6vw;
+        height: 6vw;
+        width: 18vw;
+    }
+
+    .infograhic_02 {
+        right: 38%;
+        top: 14vw;
+        height: 6vw;
+        width: 18vw;
+    }
+
+    .infograhic_03 {
+        left: 65%;
+        top: 29vw;
+        height: 6vw;
+        width: 18vw;
+    }
+
+    .infograhic_04 {
+        right: 15%;
+        top: 59vw;
+        height: 6vw;
+        width: 18vw;
+    }
+    .infograhic_05 {
+        right: 33%;
+        top: 52vw;
+        height: 6vw;
+        width: 18vw;
+    }
+
+    .infograhic_06 {
+        left: 55%;
+        top: 37vw;
+        height: 6vw;
+        width: 18vw;
+    }
+
 }
 
-@media screen and (min-width: 520px) {
-    .portraet {
-        bottom: -45%;
-    }
-}
+
+/*----- IPAD ------*/
 
 @media screen and (min-width: 600px) {
 
@@ -1002,7 +1035,6 @@ body {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
     }
-
 
 
     [data-container] {
@@ -1029,6 +1061,7 @@ body {
         font-size: 3.85em;
         text-align: left;
     }
+
     [data-contactname] {
         grid-column: 2/12;
         text-align: left;
@@ -1037,13 +1070,6 @@ body {
         font-size: 3.85em;
         text-align: left;
     }
-
-    .portraet {
-        height: 42vw;
-        width: 42vw;
-        bottom: 0
-    }
-
 
     .d1 {
         width: 50vw;
@@ -1065,53 +1091,65 @@ body {
         width: 10vw;
     }
 */
-    /*--- BEHIND THE BRAND VIDEO ---*/
-    .video-container-about {
-        grid-column: 2/8;
-    }
-    .infograhic_01 {
-        right: 4%;
-        bottom: 38vw;
-        height: 4vw;
-        width: 10vw;
-    }
-    .infograhic_02 {
-        right: 13%;
-        bottom: 33vw;
-        height: 4vw;
-        width: 10vw;
-    }
-    .infograhic_03 {
-        right: 4%;
-        bottom: 24vw;
-        height: 4vw;
-        width: 10vw;
-    }
-    .infograhic_04 {
-        right: 8%;
-        bottom: 4vw;
-        height: 4vw;
-        width: 10vw;
-    }
-    .infograhic_05 {
-        right: 12%;
-        bottom: 9vw;
-        height: 4vw;
-        width: 10vw;
-    }
-    .infograhic_06 {
-        right: 6%;
-        bottom: 19vw;
-        height: 4vw;
-        width: 10vw;
-    }
-
-
-    .test {
-        background-image: url(img/infographic/);
-    }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .about_grid {
+        grid-template-rows: 1fr;
+    }
+
+    .video-container-about {
+        grid-column: 2/12;
+        margin-top: 20px;
+    }
+
+    .portraet {
+        width: 40vw;
+        height: 40vw;
+        margin: 0 auto;
+    }
+
+    .infograhic_01 {
+        right: 20%;
+        height: 4vw;
+        width: 12vw;
+        top: 2vw;
+    }
+
+    .infograhic_02 {
+        right: 40%;
+        top: 5vw;
+        height: 4vw;
+        width: 12vw;
+    }
+
+    .infograhic_03 {
+        left: 60%;
+        top: 16vw;
+        height: 4vw;
+        width: 12vw;
+    }
+
+    .infograhic_04 {
+        right: 24%;
+        top: 35vw;
+        height: 5vw;
+        width: 12vw;
+    }
+    .infograhic_05 {
+        right: 40%;
+        top: 30vw;
+        height: 4vw;
+        width: 12vw;
+    }
+
+    .infograhic_06 {
+        left: 53%;
+        top: 21vw;
+        height: 4vw;
+        width: 12vw;
+    }
+}
 
 /*---- DESKTOP ----*/
 
@@ -1122,6 +1160,8 @@ body {
         left: 0;
     }
 }
+
+
 
 @media screen and (min-width: 1025px) {
 
@@ -1145,9 +1185,33 @@ body {
     .collections_article:hover {
         transform: scale(1.05);
     }
+
+    .about_grid {
+        grid-template-rows: 1fr;
+    }
     .portraet {
         height: 35vw;
         width: 35vw;
+        grid-column: 9/12;
+        grid-row: 3;
+    }
+
+    .infographic {
+        grid-column: 9/12;
+        grid-row: 3;
+        height: 0;
+    }
+
+    .buttons_info {
+        grid-column: 9/12;
+        grid-row: 3;
+        height: 0;
+    }
+
+    .video-container-about {
+        grid-column: 2/8;
+        margin-top: 20px;
+        margin-top: 50px;
     }
 
     .d1 {
@@ -1173,43 +1237,48 @@ body {
         width: 7vw;
     }
 */
+    [data-abouttext] {
+        grid-column: 2/12;
+    }
+
+
     .infograhic_01 {
-        right: 4%;
-        bottom: 32.4vw;
-        height: 2.5vw;
-        width: 7vw;
+        left: 110%;
+        top: 2vw;
+        height: 3.5vw;
+        width: 10vw;
     }
     .infograhic_02 {
-        right: 12%;
-        bottom: 27vw;
-        height: 2.5vw;
-        width: 7vw;
+        right: 0%;
+        top: 7vw;
+        height: 3.5vw;
+        width: 10vw;
     }
     .infograhic_03 {
-        right: 4%;
-        bottom: 20vw;
-        height: 2.5vw;
-        width: 7vw;
+        left: 112%;
+        top: 16vw;
+        height: 3.5vw;
+        width: 10vw;
     }
     .infograhic_04 {
-        right: 8%;
-        bottom: 15.5vw;
-        height: 2.5vw;
-        width: 7vw;
+        left: 94%;
+        top: 20vw;
+        height: 3.5vw;
+        width: 10vw;
         filter: invert(100%);
         filter: brightness(0.2);
     }
     .infograhic_05 {
-        right: 12%;
-        bottom: 7vw;
-        height: 2.5vw;
-        width: 7vw;
+        left: 65%;
+        top: 28vw;
+        height: 3.5vw;
+        width: 10vw;
     }
     .infograhic_06 {
-        right: 4%;
-        bottom: 3vw;
-        height: 2.5vw;
-        width: 7vw;
+        left: 110%;
+        top: 33vw;
+        height: 3.5vw;
+        width: 10vw;
         filter: brightness(100);
     }
 
@@ -1230,3 +1299,4 @@ body {
     .test {
         background-image: url(img/infographic/);
     }
+}
