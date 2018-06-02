@@ -939,12 +939,13 @@ body {
 /*---- CONTACT ----*/
 
 .contact_grid {
-    grid-column: 2/12;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin: 120px 0 140px 0;
 }
 
 .contact_grid_content {
-    grid-column: 2/12
+    grid-column: 3/3
 }
 
 [data-h2] {
@@ -1001,6 +1002,9 @@ body {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
     }
+
+
+
     [data-container] {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1124,6 +1128,10 @@ body {
     [data-container] {
         grid-template-columns: repeat(3, 1fr);
         grid-column: 2/12;
+    }
+
+    .contact_grid_content {
+        grid-column: 1fr;
     }
 
     .image_collection {
