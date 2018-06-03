@@ -916,7 +916,6 @@ body {
 .contact_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 120px 0 140px 0;
 }
 
 .contact_grid_content {
@@ -1170,8 +1169,9 @@ body {
         grid-column: 2/12;
     }
 
-    .contact_grid_content {
-        grid-column: 1fr;
+    .contact_grid {
+        grid-column: 2/12;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .image_collection {
